@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    <script>
+    var userNum = prompt("Number please:");
+    var userstring = parseInt(userNum); /* new variable to convert string (userNum) into a number*/
+
+
+    function factorial(n) {
+    /* the argument(n)is just a placeholder for the user input */
+       
+    /*This variable will store the factorial number (ex: 5!, 1!). the For Loop below will update this variable on each iteration. Starting at 1 for multiplying instead of 0 because that will give a 0 result */
+        var factorNum = 1; 
+        
+        /* create For Loop that multiplies the sum of variable factorNum with the updated /iterated variable i*/
+        for (var i = 1; i <= userstring; i = i +1) {
+                factorNum = factorNum * i;
+            }
+
+        return factorNum; /*it should give back an number - the product of all positive numbers less than or equal to the user input
+        */
+    }
+        
+    console.log(factorial(userstring));
+    </script>
+</body>
+</html>
