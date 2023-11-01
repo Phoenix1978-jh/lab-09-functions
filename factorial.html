@@ -15,15 +15,24 @@
     function factorial(n) {
     /* the argument(n)is just a placeholder for the user input */
        
-    /*This variable will store the factorial number (ex: 5!, 1!). the For Loop below will update this variable on each iteration. Starting at 1 for multiplying instead of 0 because that will give a 0 result */
+    /*This variable will store the factorial number (ex: 5! is 1 * 2 * 3 * 4 * 5). Starting at 1 for multiplying instead of 0 because that will give a 0 result. The For Loop below will update this factorial variable on each iteration.  */
         var factorNum = 1; 
         
-        /* create For Loop that multiplies the sum of variable factorNum with the updated /iterated variable i*/
-        for (var i = 1; i <= userstring; i = i +1) {
-                factorNum = factorNum * i;
-            }
 
-        return factorNum; /*it should give back an number - the product of all positive numbers less than or equal to the user input
+
+        /*use a conditional (if/else) to omit negative integer- anything less than 0. Otherwise (else) run the For Loop with calulation*/
+        if (userstring < 0) {
+            console.log("Not a positive integer. Please try again");
+        } 
+        /* create For Loop that multiplies the sum of variable factorNum with the updated /
+        iterated variable i*/
+        else {
+            for (var i = 1; i <= userstring; i = i +1) {
+                    factorNum = factorNum * i
+                };
+        }
+
+        return factorNum; /*The result of the factorial computation with For Loop above stored in this variable - 
         */
     }
         
